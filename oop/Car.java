@@ -1,6 +1,6 @@
 package oop;
 
-public class Car extends MotorTransport {
+public final class Car extends MotorTransport {
     private String modelCar;
     private  String brandCar;
 
@@ -29,5 +29,8 @@ public class Car extends MotorTransport {
     public void service(){
         super.service();
         System.out.println("Обсужен автомобиль " + modelCar + " " + brandCar + ".");
+    }
+    public final void travel(){
+        System.out.println("Отправляемся в путешествие");
     }
 }

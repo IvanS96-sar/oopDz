@@ -1,6 +1,6 @@
 package oop;
 
-public class Truck extends MotorTransport{
+public final class Truck extends MotorTransport{
     private int truckLoadCapacity;
 
     public Truck(int numberOfWheels, int maximumSpeed, String engineType, int truckLoadCapacity) {
@@ -19,5 +19,8 @@ public class Truck extends MotorTransport{
     public void service(){
         super.service();
         System.out.println("Обслужен грузовик с максимальной грузоподъемностью " + truckLoadCapacity + " тонн.");
+    }
+    public final void departure(){
+        System.out.println("Все обслужено,пора отправляться в рейс");
     }
 }

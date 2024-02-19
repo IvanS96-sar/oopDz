@@ -1,6 +1,6 @@
 package oop;
 
-public class WheeledTransport {
+public class WheeledTransport implements Transport{
     private int wheelCount;
     private int maximumSpeed;
 

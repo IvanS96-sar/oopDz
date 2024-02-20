@@ -1,7 +1,8 @@
 package oop;
 
-public final class Bicycle extends WheeledTransport{
+public final class Bicycle extends WheeledTransport {
     private String typeOfBike;
+
     public Bicycle(int numberOfWheels, int maximumSpeed, String typeOfBike) {
         super(numberOfWheels, maximumSpeed);
         this.typeOfBike = typeOfBike;
@@ -14,13 +15,20 @@ public final class Bicycle extends WheeledTransport{
     public void setTypeOfBike(String typeOfBike) {
         this.typeOfBike = typeOfBike;
     }
+
     @Override
-    public  void service(){
+    public void service() {
         super.service();
-        System.out.println(" Обслужено навесное оборудование велосипеда типа " +"\""
-                + typeOfBike + "\"" + "." );
+        serviceBike();
+        ride();
     }
-    public final void ride(){
+
+    public final void ride() {
         System.out.println("Можно кататься");
+    }
+
+    public void serviceBike() {
+        System.out.println(" Обслужено навесное оборудование велосипеда типа " + "\""
+                + typeOfBike + "\"" + ".");
     }
 }

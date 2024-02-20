@@ -1,6 +1,6 @@
 package oop;
 
-public class MotorTransport extends WheeledTransport{
+public abstract class MotorTransport extends WheeledTransport{
     private String engineType;
     public MotorTransport(int numberOfWheels, int maximumSpeed, String engineType) {
         super(numberOfWheels, maximumSpeed);
@@ -17,6 +17,9 @@ public class MotorTransport extends WheeledTransport{
     @Override
     public void service(){
         super.service();
+        serviceEngine();
+    }
+    public void serviceEngine(){
         System.out.println(" Обслужен " +"\""
                 + engineType + "\"" + " тип двигателя.");
     }

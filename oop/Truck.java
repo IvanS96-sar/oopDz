@@ -18,9 +18,13 @@ public final class Truck extends MotorTransport{
     @Override
     public void service(){
         super.service();
-        System.out.println("Обслужен грузовик с максимальной грузоподъемностью " + truckLoadCapacity + " тонн.");
+        serviceTruck();
+        departure();
     }
     public final void departure(){
         System.out.println("Все обслужено,пора отправляться в рейс");
+    }
+    public void serviceTruck(){
+        System.out.println("Обслужен грузовик с максимальной грузоподъемностью " + truckLoadCapacity + " тонн.");
     }
 }

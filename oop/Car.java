@@ -45,9 +45,6 @@ public final class Car extends MotorTransport {
         private int maximumSpeed;
         private String engineType;
 
-
-        public Builder() {
-        }
         public Builder modelCar(String modelCar){
             this.modelCar = modelCar;
             return this;
